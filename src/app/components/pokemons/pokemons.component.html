@@ -1,0 +1,5 @@
+<p>pokemons works!</p>
+<form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="namePokemon" [(ngModel)]="namePokemon" placeholder="Search your Pokemon">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="getPokemons(namePokemon)">Search</button>
+</form>
