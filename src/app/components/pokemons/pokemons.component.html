@@ -1,5 +1,14 @@
-<p>pokemons works!</p>
-<form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="namePokemon" [(ngModel)]="namePokemon" placeholder="Search your Pokemon">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="getPokemons(namePokemon)">Search</button>
-</form>
+<div style="height: 800px;">
+    <form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="namePokemon"
+            [(ngModel)]="namePokemon" placeholder="Search your Pokemon">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+            (click)="getPokemons(namePokemon)">Search</button>
+    </form>
+    <section class="d-flex flex-column justify-content-center">
+        <p class="d-flex justify-content-center">{{pokemon.name}}</p>
+        <div class="d-flex justify-content-center">
+            <img src="{{pokemon.sprites?.front_default}}" alt="{{pokemon.name}}" style="height: 400px;">
+        </div>
+    </section>
+</div>
