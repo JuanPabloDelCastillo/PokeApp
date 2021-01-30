@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PokemonsComponent } from './components/pokemons/pokemons.component';
 
 const routes: Routes = [
-  { path:'home', component: PokemonsComponent },
+  { path: 'home', component: PokemonsComponent },
   { path: '**', redirectTo: 'home' }
 ];
 
