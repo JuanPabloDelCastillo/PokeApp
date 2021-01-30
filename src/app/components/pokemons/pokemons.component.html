@@ -64,12 +64,11 @@
             </div>
             <div id="right">
               <div id="stats">
-                <strong>Name:</strong> {{pokemon.name}}<br/>
-                <strong>Type:</strong> {{pokemon.types[0].type.name}}<br/>
-                <strong>Height:</strong> 2'072''<br/>
-                <strong>Weight:</strong> 43.2 lbs.<br/><br/>
-                <strong>The duck Pokemon</strong><br/>
-                Uses mysterious powers to perform various attacks.
+                <strong>Name:</strong> {{pokemon?.name}}<br/>
+                <strong>Type:</strong> {{pokemon?.types[0]?.type?.name}}<br/>
+                <strong>Height:</strong> {{pokemon?.height}}'<br/>
+                <strong>Weight:</strong> {{pokemon?.weight}} lbs.<br/>                
+                {{pokemon.description}}
               </div>
               <div id="blueButtons1">
                 <div class="blueButton"></div>

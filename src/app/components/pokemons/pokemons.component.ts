@@ -20,6 +20,19 @@ export class PokemonsComponent implements OnInit {
       res =>{
         console.log(res);
         this.pokemon = res;
+        this.getPokemonDescription(this.pokemon.species.url);
+      },
+      err => {
+        console.log(err);
+      }      
+    );    
+  }
+
+  getPokemonDescription(num: string){
+    this.pokeService.getPokemonDescription(num).subscribe(
+      res =>{
+        console.log(res.flavor_text_entries[1].flavor_text); 
+        this.pokemon.description = res.flavor_text_entries[1].flavor_text;       
       },
       err => {
         console.log(err);
